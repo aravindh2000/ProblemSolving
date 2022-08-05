@@ -10,6 +10,7 @@ public class MyClass {
     }
     static void fun(int[][] a,int l1,int l2,int i,int j,char d)
     {
+    try{
         if(d=='r')
         {
             if(j>l1)
@@ -63,6 +64,10 @@ public class MyClass {
             }
             
         }
+        }
+        catch(Exception e)
+        {
+}
         
         
         
