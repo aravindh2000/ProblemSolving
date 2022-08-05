@@ -1,0 +1,70 @@
+public class MyClass {
+    public static void main(String args[]) {
+            int[][] a={
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16}
+            };
+            fun(a,3,0,0,0,'r');
+    }
+    static void fun(int[][] a,int l1,int l2,int i,int j,char d)
+    {
+        if(d=='r')
+        {
+            if(j>l1)
+            {
+                fun(a,l1,l2,i+1,j-1,'d');
+            }
+            else{
+                System.out.print(a[i][j]);
+                fun(a,l1,l2,i,j+1,d);
+            }
+            
+            
+        }
+       else if(d=='d')
+        {
+            
+            if(i>l1)
+            {
+                fun(a,l1,l2,i-1,j-1,'l');
+            }
+            else{
+                System.out.print(a[i][j]);
+                fun(a,l1,l2,i+1,j,'d');
+            }
+            
+            
+            
+        }
+        else if(d=='l')
+        {
+            if(j<l2)
+            {
+                fun(a,l1,l2,i-1,j+1,'u');
+            }
+            else{
+                System.out.print(a[i][j]);
+                fun(a,l1,l2,i,j-1,'l');
+            }
+        }
+        else {
+            if(i==l2+1)
+            {
+                l1-=1;
+                l2+=1;
+                fun(a,l1,l2,i,j,'r');
+                
+            }
+            else{
+                System.out.print(a[i][j]);
+                fun(a,l1,l2,i-1,j,'u');
+            }
+            
+        }
+        
+        
+        
+    }
+}
