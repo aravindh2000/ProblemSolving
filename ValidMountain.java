@@ -29,3 +29,10 @@ public class MyClass {
        }
     }
 }
+
+
+Output :
+
+test case 1 :  i/p--> [5,8,8] o/p---> false
+test case 2 :  i/p--> [1,2,4,2] o/p--->true
+test case 3 :  i/p--> [5,2,1,4] o/p---->false
