@@ -1,11 +1,11 @@
 public class MyClass {
     public static void main(String args[]) {
-   int[]  a={-1,2,4,6,-1,-2,2,3,-5};
+   int[]  a={-1,2,4,6,-1,-2,2,3,-5,1,3,5,6,7,0,-3,-5,2};
    boolean rise=false,fall=false;
-int[] s=new int[5];
+int[] s=new int[100];
 int c=0;
 
-int[] e=new int[5];
+int[] e=new int[100];
    
    for(int i=0;i<a.length-1;i++)
    { 
@@ -39,8 +39,17 @@ int[] e=new int[5];
        
        
    }
-   System.out.print(s[1]+","+e[1]);
+ for(int k=0;k<s.length;k++)
+ {
+     if(s[k]==0&&e[k]==0)
+     {
+         break;
+     }
+     System.out.println("["+s[k]+","+e[k]+"]");
    
+     
+ }
+         
    
     }
 }
